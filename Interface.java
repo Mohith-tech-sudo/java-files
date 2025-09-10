@@ -1,5 +1,5 @@
 //Interface program
-import java.io.*;
+import java.util.*;
 
 interface Add{
     int add(int a,int b);
