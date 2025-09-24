@@ -1,0 +1,63 @@
+package traininformation;
+
+public class Train {
+    String trainID;
+    String trainName;
+    String date;
+    String startingPoint;
+    String endingPoint;
+
+    public Train(String trainID, String trainName, String date, String startingPoint, String endingPoint) {
+        this.trainID = trainID;
+        this.trainName = trainName;
+        this.date = date;
+        this.startingPoint = startingPoint;
+        this.endingPoint = endingPoint;
+    }
+
+    public void print() {
+        System.out.println("Train Information:");
+        System.out.println("Train ID: " + trainID);
+        System.out.println("Train Name: " + trainName);
+        System.out.println("Date: " + date);
+        System.out.println("Starting Point: " + startingPoint);
+        System.out.println("Ending Point: " + endingPoint);
+    }
+}
+
+package traininformation.users;
+
+public class UserInfo {
+    String userID;
+    String userName;
+    String userAddress;
+    String userContactNumber;
+
+    public UserInfo(String userID, String userName, String userAddress, String userContactNumber) {
+        this.userID = userID;
+        this.userName = userName;
+        this.userAddress = userAddress;
+        this.userContactNumber = userContactNumber;
+    }
+
+    public void print() {
+        System.out.println("User Information:");
+        System.out.println("User ID: " + userID);
+        System.out.println("User Name: " + userName);
+        System.out.println("User Address: " + userAddress);
+        System.out.println("User Contact Number: " + userContactNumber);
+    }
+}
+
+import traininformation.Train;
+import traininformation.users.UserInfo;
+
+public class TrainMain {
+    public static void main(String[] args) {
+        Train train = new Train("12345", "Express", "2024-05-10", "City A", "City B");
+        train.print();
+
+        UserInfo userInfo = new UserInfo("001", "John Doe", "123 Main St", "123-456-7890");
+        userInfo.print();
+    }
+}
